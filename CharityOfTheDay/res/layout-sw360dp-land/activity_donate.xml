@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ImageView
+        android:id="@+id/Donate_ImageView_Background"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/donate_background" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="210dp"
+        android:layout_centerVertical="true"
+        android:background="@drawable/donate_landscape_border" >
+
+        <EditText
+            android:id="@+id/donationAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/Donate_TextView_Donate"
+            android:layout_toLeftOf="@+id/textView2"
+            android:layout_toRightOf="@+id/Donate_TextView_Donate"
+            android:background="@drawable/orange_edittext"
+            android:ems="10"
+            android:hint="Amount"
+            android:inputType="numberDecimal"
+            android:textSize="25sp" >
+
+            <requestFocus />
+        </EditText>
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/donationAmount"
+            android:layout_alignParentRight="true"
+            android:paddingRight="10dp"
+            android:text="BTC"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="28sp" />
+
+        <TextView
+            android:id="@+id/Donate_TextView_To"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/Donate_TextView_Donate"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:text="To:"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/charityName_donate_activity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/Donate_TextView_To"
+            android:layout_alignBottom="@+id/Donate_TextView_To"
+            android:layout_toRightOf="@+id/Donate_TextView_To"
+            android:paddingLeft="5dp"
+            android:text="Charity Name"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textStyle="bold" />
+        
+        <TextView
+            android:id="@+id/Donate_TextView_BitcoinAddressLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Donate_TextView_To"
+            android:layout_alignLeft="@+id/Donate_TextView_To"            
+            android:layout_marginTop="5dp"
+            android:text="Address:"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/Donate_TextView_BitcoinAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/Donate_TextView_BitcoinAddressLabel"
+            android:layout_alignBottom="@+id/Donate_TextView_BitcoinAddressLabel"
+            android:layout_toRightOf="@+id/Donate_TextView_BitcoinAddressLabel"
+            android:paddingLeft="1dp"
+            android:text="Bitcoin Address"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/Donate_TextView_Donate"
+            style="@style/LandscapeTitleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="10dp"
+            android:text="Donate"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <TextView
+            android:id="@+id/Donate_TextView_Balancelabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/Donate_TextView_BitcoinAddressLabel"
+            android:paddingLeft="10dp"
+            android:paddingTop="7dp"
+            android:text="@string/donate_balance"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <Button
+            android:id="@+id/Donate_Button_Donate"
+            android:layout_width="150dp"
+            android:layout_height="35dp"
+            android:layout_below="@+id/Donate_TextView_Balancelabel"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/gray_button"
+            android:onClick="userClicksDonateButton"
+            android:text="@string/donate_donation_button_donate" />
+
+        <TextView
+            android:id="@+id/Donate_TextView_Balance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/Donate_TextView_Balancelabel"
+            android:layout_alignBottom="@+id/Donate_TextView_Balancelabel"
+            android:layout_toRightOf="@+id/Donate_TextView_Balancelabel"
+            android:paddingLeft="5dp"
+            android:text="[Balance]"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

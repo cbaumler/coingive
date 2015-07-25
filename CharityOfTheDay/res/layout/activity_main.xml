@@ -1,0 +1,101 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:id="@+id/ScrlView" 
+	android:layout_width="fill_parent" 
+	android:layout_height="fill_parent"
+	tools:context=".MainActivity" > 
+
+	<RelativeLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content" 
+	    android:paddingBottom="15dp">
+	
+	    <ImageView
+	        android:id="@+id/Main_ImageView_TopBanner"
+	        android:layout_width="wrap_content"
+	        android:layout_height="110dp"
+	        android:layout_alignParentLeft="true"
+	        android:layout_alignParentTop="true"
+	        android:layout_alignParentRight="true"
+	        android:scaleType="centerCrop"
+	        android:src="@drawable/main_portrait_topbanner" />
+	    
+	    <Button
+	        android:id="@+id/Main_Button_DonateNow"
+	        android:layout_width="300dp"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentBottom="true"
+	        android:layout_centerHorizontal="true"
+	        android:layout_marginTop="15dp"
+	        android:layout_marginBottom="15dp"
+	        android:layout_below="@+id/Main_Button_VisitWebsite"
+	        android:background="@drawable/orange_button"
+	        android:onClick="donateNow"
+	        android:text="@string/donate_donation_button_donate"
+	        android:textSize="23sp"
+	        android:textStyle="bold" />
+	
+	    <TextView
+	        android:id="@+id/Main_TextView_CotdLabel"
+	        style="@style/LandscapeTitleText"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentLeft="true"
+	        android:layout_marginTop="-25dp"
+	        android:layout_below="@+id/Main_ImageView_TopBanner"
+	        android:paddingBottom="7dp"
+	        android:paddingTop="7dp"
+	        android:text="Charity of the Day"
+	        android:textAppearance="?android:attr/textAppearanceLarge"
+	        android:textSize="28sp" />
+	
+	    <TextView
+	        android:id="@+id/charityName"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentRight="true"
+	        android:layout_below="@+id/Main_TextView_CotdLabel"
+	        android:layout_marginTop="10dp"
+	        android:paddingRight="10dp"
+	        android:text="Charity Name goes here"
+	        android:textAppearance="?android:attr/textAppearanceLarge"
+	        android:textSize="28sp"
+	        android:textStyle="bold" />
+	
+	    <TextView
+	        android:id="@+id/charityDescription"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentLeft="true"
+	        android:layout_below="@+id/charityName"
+	        android:paddingLeft="10dp"
+	        android:paddingRight="10dp"
+	        android:paddingTop="10dp"
+	        android:text="Charity Description goes here."
+	        android:textAppearance="?android:attr/textAppearanceSmall"
+	        android:textSize="17sp" />
+	
+	    <Button
+	        android:id="@+id/Main_Button_VisitWebsite"
+	        android:layout_width="300dp"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/charityDescription"
+	        android:layout_centerHorizontal="true"
+	        android:layout_marginTop="25dp"
+	        android:background="@drawable/gray_button"
+	        android:text="Visit Charity Website"
+	        android:textSize="23sp"
+	        android:onClick="VisitWebsite_Click" />
+
+	    <ImageView
+	        android:id="@+id/Main_ImageView_CharityLogo"
+	        android:layout_width="80dp"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentTop="true"
+	        android:layout_alignParentRight="true"
+	        android:layout_marginRight="10dp"
+	        android:src="@drawable/abc_ab_bottom_solid_dark_holo" 
+	        />
+	    	
+	</RelativeLayout>
+</ScrollView>

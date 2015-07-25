@@ -1,0 +1,92 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".AccountSettingsActivity" >
+
+    <TextView
+        android:id="@+id/lblWhyAmIHere"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="@string/account_settings_unauthenticated_title"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/lblWhy1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/lblWhyAmIHere"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:text="@string/account_settings_unauthenticated_text1"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/settings_textView_withdrawal_limit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/lblWhy1"
+        android:layout_below="@+id/lblWhy1"
+        android:text="Limit debits to USD"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/settings_editText_withdrawal_limit"
+        android:layout_width="70sp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/settings_textView_withdrawal_limit"
+        android:layout_alignBottom="@+id/settings_textView_withdrawal_limit"
+        android:layout_toRightOf="@+id/settings_textView_withdrawal_limit"
+        android:background="@drawable/orange_edittext"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:minWidth="60sp"
+        android:text="25" >
+
+        <requestFocus />
+    </EditText>
+
+    <Button
+        android:id="@+id/AccountSettings_Button_WhatIsCoinbase"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/btnLinkCoinbaseAccount"
+        android:layout_alignRight="@+id/btnLinkCoinbaseAccount"
+        android:layout_below="@+id/btnLinkCoinbaseAccount"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/gray_button"
+        android:padding="10dp"
+        android:text="@string/account_settings_unauthenticated_whatiscoinbase" 
+        android:onClick="WhatIsCoinbase_Click" />
+
+    <Button
+        android:id="@+id/btnLinkCoinbaseAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/settings_editText_withdrawal_limit"
+        android:layout_below="@+id/settings_textView_withdrawal_limit"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/orange_button"
+        android:onClick="linkMyCoinbase"
+        android:padding="10dp"
+        android:text="@string/account_settings_authenticate"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/settings_textView_daily"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/settings_editText_withdrawal_limit"
+        android:layout_alignBottom="@+id/settings_editText_withdrawal_limit"
+        android:layout_toRightOf="@+id/settings_editText_withdrawal_limit"
+        android:text="daily"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+</RelativeLayout>

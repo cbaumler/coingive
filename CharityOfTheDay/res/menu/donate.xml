@@ -1,0 +1,18 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" 
+    xmlns:charityoftheday="http://schemas.android.com/apk/res-auto" >
+    <!-- Search -->
+    <item android:id="@+id/action_search"
+          android:icon="@drawable/ic_action_search"
+          android:title="@string/title_activity_search"
+          charityoftheday:showAsAction="ifRoom" />   
+    <!-- Transaction History -->
+    <item android:id="@+id/action_transaction_history"
+          android:icon="@drawable/ic_action_collection"
+          android:title="@string/action_transaction_history"
+          charityoftheday:showAsAction="ifRoom" />    
+    <!-- Account Settings -->
+    <item android:id="@+id/action_account_settings"
+          android:icon="@drawable/ic_action_settings"
+          android:title="@string/action_account_settings"
+          charityoftheday:showAsAction="ifRoom" />  
+</menu>

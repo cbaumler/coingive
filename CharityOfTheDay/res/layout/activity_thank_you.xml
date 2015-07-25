@@ -1,0 +1,97 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:id="@+id/ScrlView" 
+	android:layout_width="fill_parent" 
+	android:layout_height="fill_parent"
+	tools:context=".ThankYouActivity" > 
+
+	<RelativeLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content" >
+	    
+	    <ImageView
+	        android:id="@+id/ThankYou_ImageView_PortraitBanner"
+	        android:layout_width="wrap_content"
+	        android:layout_height="150dp"
+	        android:layout_alignParentLeft="true"
+	        android:layout_alignParentTop="true"
+	        android:layout_alignParentRight="true"
+	        android:scaleType="centerCrop"
+	        android:src="@drawable/thankyou_portrait_topbanner" 
+	        android:contentDescription="@string/thank_you_banner_contentdescription"/>
+	    
+	    <TextView
+	        android:id="@+id/ThankYou_TextView_EncouragingBlurb"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentLeft="true"
+	        android:layout_below="@+id/ThankYou"
+	        android:layout_marginTop="10dp"
+	        android:text="@string/thank_you_text"
+	        android:layout_marginLeft="10dp"
+	        android:textAppearance="?android:attr/textAppearanceMedium" />
+	
+	    <TextView
+	        android:id="@+id/ThankYou_TextView_DonationComplete"
+	        style="@style/LandscapeTitleText"
+	        android:layout_below="@+id/ThankYou_ImageView_PortraitBanner"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentLeft="true"
+	        android:layout_marginTop="-20dp"
+	        android:text="@string/thank_you_donationcomplete" />
+	
+	    <TextView
+	        android:id="@+id/ThankYou"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/ThankYou_TextView_DonationComplete"
+	        android:layout_centerHorizontal="true"
+	        android:layout_marginTop="15dp"
+	        android:text="@string/thank_you_title"
+	        android:textAppearance="?android:attr/textAppearanceLarge"
+	        android:textSize="30sp"
+	        android:textStyle="bold" />
+	    
+	    <Button
+	        android:id="@+id/ThankYou_Button_Tweet"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/ThankYou_TextView_EncouragingBlurb"
+	        android:layout_centerHorizontal="true"
+	        android:layout_marginTop="15dp"
+	        android:layout_alignRight="@+id/ThankYou_Button_SeeOtherCharities"
+	        android:layout_alignLeft="@+id/ThankYou_Button_SeeOtherCharities"
+	        android:background="@drawable/gray_button"
+	        android:onClick="Tweet_Click"
+	        android:padding="10dp"
+	        android:text="@string/thank_you_share" />
+	    
+	    <Button
+	        android:id="@+id/ThankYou_Button_SeeTransactionHistory"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/ThankYou_Button_SeeOtherCharities"
+	        android:layout_centerHorizontal="true"
+	        android:layout_marginTop="15dp"
+	        android:layout_alignRight="@+id/ThankYou_Button_SeeOtherCharities"
+	        android:layout_alignLeft="@+id/ThankYou_Button_SeeOtherCharities"
+	        android:background="@drawable/gray_button"
+	        android:onClick="SeeTransactionHistory_Click"
+	        android:padding="10dp"
+	        android:text="@string/thank_you_seetransactionhistory" />
+	
+	    <Button
+	        android:id="@+id/ThankYou_Button_SeeOtherCharities"
+	        android:layout_width="300dp"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/ThankYou_Button_Tweet"
+	        android:layout_centerHorizontal="true"
+	        android:layout_marginTop="15dp"
+	        android:background="@drawable/gray_button"
+	        android:onClick="SeeOtherCharities_Click"
+	        android:padding="10dp"
+	        android:text="@string/thank_you_seeothercharities" />
+	    	    	
+	</RelativeLayout>
+</ScrollView>

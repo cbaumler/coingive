@@ -1,0 +1,150 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:id="@+id/ScrlView" 
+	android:layout_width="fill_parent" 
+	android:layout_height="fill_parent" 
+	tools:context=".DonateActivity">
+	<RelativeLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content">
+
+	    <ImageView
+	        android:id="@+id/Donate_ImageView_TopBannerPortrait"
+	        android:layout_width="wrap_content"
+	        android:layout_height="260dp"
+	        android:layout_alignParentLeft="true"
+	        android:layout_alignParentTop="true"
+	        android:layout_alignParentRight="true"
+	        android:scaleType="centerCrop"
+	        android:src="@drawable/donate_portrait_topbanner" />
+	    
+	    <TextView
+	        android:id="@+id/Donate_TextView_BitcoinAddress"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignLeft="@+id/labelBitcoinAddress"
+	        android:layout_below="@+id/labelBitcoinAddress"
+	        android:paddingLeft="20dp"
+	        android:textSize="45sp"
+	        android:text="ffffffffffffffffffffffffffffffffffffff"
+	        android:textAppearance="?android:attr/textAppearanceMedium" />
+	
+	    <TextView
+	        android:id="@+id/textView2"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentLeft="true"
+	        android:layout_below="@+id/Donate_TextView_TitleWithOrangeBg"
+	        android:paddingLeft="10dp"
+	        android:paddingTop="20dp"
+	        android:text="To:"
+	        android:textAppearance="?android:attr/textAppearanceLarge"
+	        android:textSize="45sp" />
+	
+	    <TextView
+	        android:id="@+id/charityName_donate_activity"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignBaseline="@+id/textView2"
+	        android:layout_alignBottom="@+id/textView2"
+	        android:layout_toRightOf="@+id/textView2"
+	        android:paddingLeft="5dp"
+	        android:text="Charity Name"
+	        android:textAppearance="?android:attr/textAppearanceLarge"
+	        android:textSize="45sp"
+	        android:textStyle="bold" />
+	
+	    <TextView
+	        android:id="@+id/textView3"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentLeft="true"
+	        android:layout_below="@+id/textView2"
+	        android:paddingLeft="10dp"
+	        android:paddingTop="20dp"
+	        android:text="@string/donate_amount"
+			android:textSize="45sp"
+	        android:textAppearance="?android:attr/textAppearanceLarge" />
+	
+	    <TextView
+	        android:id="@+id/labelBitcoinAddress"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentLeft="true"
+	        android:layout_below="@+id/textView3"
+	        android:paddingLeft="10dp"
+	        android:paddingTop="20dp"
+	        android:text="@string/donate_bitcoin_address"
+			android:textSize="45sp"
+	        android:textAppearance="?android:attr/textAppearanceLarge" />
+	
+	    <EditText
+	        android:id="@+id/donationAmount"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignBaseline="@+id/textView3"
+	        android:layout_alignBottom="@+id/textView3"
+	        android:layout_alignParentRight="true"
+	        android:layout_toRightOf="@+id/textView3"
+	        android:background="@drawable/orange_edittext"
+	        android:ems="10"
+	        android:inputType="number|numberDecimal"
+			android:textSize="45sp"
+	        android:textAppearance="?android:attr/textAppearanceLarge" />
+	
+	    <TextView
+	        android:id="@+id/Donate_TextView_Balancelabel"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignLeft="@+id/Donate_TextView_BitcoinAddress"
+	        android:layout_below="@+id/Donate_TextView_BitcoinAddress"
+	        android:paddingLeft="10dp"
+	        android:paddingTop="20dp"
+	        android:text="@string/donate_balance"
+			android:textSize="45sp"
+	        android:textAppearance="?android:attr/textAppearanceLarge" />
+	        
+	    <TextView
+	        android:id="@+id/Donate_TextView_Balance"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignLeft="@+id/Donate_TextView_Balancelabel"
+	        android:layout_alignRight="@+id/Donate_Button_Donate"
+	        android:layout_below="@+id/Donate_TextView_Balancelabel"
+	        android:paddingLeft="20dp"
+	        android:text="Loading..."
+			android:textSize="45sp"
+	        android:textAppearance="?android:attr/textAppearanceMedium" />
+	
+	    <Button
+	        android:id="@+id/Donate_Button_Donate"
+	        android:layout_width="600dp"
+	        android:layout_height="100dp"
+	        android:layout_below="@+id/Donate_TextView_Balance"
+	        android:layout_centerHorizontal="true"
+	        android:layout_marginTop="45dp"
+	        android:background="@drawable/orange_button"
+	        android:onClick="userClicksDonateButton"
+	        android:text="@string/donate_donation_button_donate"
+	        android:textAppearance="?android:attr/textAppearanceLargeInverse"
+	        android:textSize="50sp"
+	        android:textStyle="bold" />
+	
+	    <TextView
+	        android:id="@+id/Donate_TextView_TitleWithOrangeBg"
+	        style="@style/LandscapeTitleText"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentLeft="true"
+	        android:layout_below="@+id/Donate_ImageView_TopBannerPortrait"
+	        android:layout_marginTop="-40dp"
+	        android:paddingBottom="7dp"
+	        android:paddingLeft="15dp"
+	        android:paddingRight="15dp"
+	        android:paddingTop="7dp"
+	        android:text="@string/title_activity_donate"
+	        android:textAppearance="?android:attr/textAppearanceLarge"
+	        android:textSize="65sp" />
+        
+	</RelativeLayout>
+</ScrollView>

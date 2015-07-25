@@ -1,0 +1,48 @@
+---Readme first---
+Communication is done using JSON. Send a request message formatted in JSON, and the server will either send a response or error message also formatted in JSON.
+
+All request messages have the "messageId" property. All response messages (including errors) have the "responseId" property. Errors always have a responseId of 0.
+Message payload data is held in the "data" property. For example, to view the error message in an error response, you would use
+message->data->errorMessage.
+
+---Error responses
+responseId	0
+[data]
+errorMessage	string - says what went wrong
+
+---Requesting charity of the day information
+
+Request message:
+messageId	1
+
+Response message:
+responseId	1
+[data]
+name		string
+tagline		"
+description	"
+(some other stuff I am too lazy to write out right now)
+
+---Searching through charities
+
+Request message
+messageId	2
+[data]
+query		string
+
+Response message
+responseId	2
+[data]
+results		(container; each item inside is a charity)
+id		int
+name		string
+
+---Request info on an individual charity by id
+
+Request message
+messageId 	3
+[data]
+charityId	int
+
+Response message
+(Returns a response message id 1)

@@ -1,0 +1,104 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:id="@+id/ScrlView" 
+	android:layout_width="fill_parent" 
+	android:layout_height="fill_parent"
+	tools:context=".MainActivity" > 
+
+	<RelativeLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content" >
+	
+	    <ImageView
+	        android:id="@+id/Main_ImageView_TopBanner"
+	        android:layout_width="wrap_content"
+	        android:layout_height="250dp"
+	        android:layout_alignParentLeft="true"
+	        android:layout_alignParentTop="true"
+	        android:layout_alignParentRight="true"
+	        android:scaleType="centerCrop"
+	        android:src="@drawable/main_portrait_topbanner" />
+	    
+	    <TextView
+	        android:id="@+id/Main_TextView_CotdLabel"
+	        style="@style/LandscapeTitleText"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentLeft="true"
+	        android:layout_below="@+id/Main_ImageView_TopBanner"
+	        android:layout_marginTop="-40dp"
+	        android:paddingBottom="7dp"
+	        android:paddingTop="7dp"
+	        android:text="Charity of the Day"
+	        android:textAppearance="?android:attr/textAppearanceLarge"
+	        android:textSize="65sp" />
+
+	    <TextView
+	        android:id="@+id/charityName"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentRight="true"
+	        android:layout_below="@+id/Main_TextView_CotdLabel"
+	        android:layout_marginTop="15dp"
+	        android:paddingRight="10dp"
+	        android:text="Charity Name goes here"
+	        android:textAppearance="?android:attr/textAppearanceLarge"
+	        android:textSize="65sp"
+	        android:textStyle="bold" />
+	
+	    <TextView
+	        android:id="@+id/charityDescription"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentLeft="true"
+	        android:layout_below="@+id/charityName"
+	        android:paddingLeft="10dp"
+	        android:paddingRight="10dp"
+	        android:paddingTop="15dp"
+	        android:text="Charity Description goes here."
+	        android:textAppearance="?android:attr/textAppearanceSmall"
+	        android:textSize="35sp" />
+	
+	    <Button
+	        android:id="@+id/Main_Button_VisitWebsite"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/charityDescription"
+	        android:layout_alignLeft="@+id/Main_Button_DonateNow"
+	        android:layout_alignRight="@+id/Main_Button_DonateNow"
+	        android:layout_centerHorizontal="true"
+	        android:layout_marginTop="30dp"
+	        android:background="@drawable/gray_button"
+	        android:onClick="VisitWebsite_Click"
+	        android:paddingBottom="15dp"
+	        android:paddingTop="15dp"
+	        android:text="Visit Charity Website"
+	        android:textSize="45sp" />
+	
+	    <Button
+	        android:id="@+id/Main_Button_DonateNow"
+	        android:layout_width="600dp"
+	        android:layout_height="wrap_content"
+	        android:layout_centerHorizontal="true"
+	        android:layout_marginTop="25dp"
+	        android:layout_below="@+id/Main_Button_VisitWebsite"
+	        android:background="@drawable/orange_button"
+	        android:onClick="donateNow"
+	        android:paddingBottom="15dp"
+	        android:paddingTop="15dp"
+	        android:text="@string/donate_donation_button_donate"
+	        android:textSize="50sp"
+	        android:textStyle="bold" />
+	    
+	    <ImageView
+	        android:id="@+id/Main_ImageView_CharityLogo"
+	        android:layout_width="200dp"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentTop="true"
+	        android:layout_alignParentRight="true"
+	        android:layout_marginRight="20dp"
+	        android:src="@drawable/abc_ab_bottom_solid_dark_holo" 
+	        />
+	    
+	</RelativeLayout>
+</ScrollView>
